@@ -1,0 +1,6 @@
+[source,bash]
+----
+$ echo '["001","002","001","004","003","001","001","001","002"]' | http POST 'http://localhost:8080/checkout' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Accept:application/json'
+----

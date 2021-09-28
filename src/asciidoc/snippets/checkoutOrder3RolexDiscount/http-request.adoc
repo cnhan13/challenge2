@@ -1,0 +1,10 @@
+[source,http,options="nowrap"]
+----
+POST /checkout HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Accept: application/json
+Content-Length: 37
+Host: localhost:8080
+
+["001","002","001","004","003","001"]
+----

@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 358
+
+[{"id":"001","name":"Rolex","unitPrice":100.0,"discountQuantity":3,"discountPrice":200.0},{"id":"002","name":"Michael Kors","unitPrice":80.0,"discountQuantity":2,"discountPrice":120.0},{"id":"003","name":"Swatch","unitPrice":50.0,"discountQuantity":0,"discountPrice":0.0},{"id":"004","name":"Casio","unitPrice":30.0,"discountQuantity":0,"discountPrice":0.0}]
+----

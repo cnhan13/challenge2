@@ -1,0 +1,55 @@
+= BCG Digital Ventures - Challenge 2
+
+This is the API request & response samples for the service running at http://localhost:8080
+
+== GET /watches
+.http request
+include::snippets/getWatches/http-request.adoc[]
+
+.http response
+include::snippets/getWatches/http-response.adoc[]
+
+
+== POST /checkout
+
+=== Checkout Empty Order
+.http request
+include::snippets/checkoutEmptyOrder/http-request.adoc[]
+
+.http response
+include::snippets/checkoutEmptyOrder/http-response.adoc[]
+
+=== Checkout Order No Discount
+.http request
+include::snippets/checkoutOrderNoDiscount/http-request.adoc[]
+
+.http response
+include::snippets/checkoutOrderNoDiscount/http-response.adoc[]
+
+=== Checkout Order 3 Rolex Discount
+.http request
+include::snippets/checkoutOrder3RolexDiscount/http-request.adoc[]
+
+.http response
+include::snippets/checkoutOrder3RolexDiscount/http-response.adoc[]
+
+=== Checkout Order 4 Rolex Discount
+.http request
+include::snippets/checkoutOrder4RolexDiscount/http-request.adoc[]
+
+.http response
+include::snippets/checkoutOrder4RolexDiscount/http-response.adoc[]
+
+=== Checkout Order 5 Rolex Discount
+.http request
+include::snippets/checkoutOrder5RolexDiscount/http-request.adoc[]
+
+.http response
+include::snippets/checkoutOrder5RolexDiscount/http-response.adoc[]
+
+=== Checkout Order 5 Rolex 2 Michael Kors Discount
+.http request
+include::snippets/checkoutOrder5Rolex2MichaelKorsDiscount/http-request.adoc[]
+
+.http response
+include::snippets/checkoutOrder5Rolex2MichaelKorsDiscount/http-response.adoc[]

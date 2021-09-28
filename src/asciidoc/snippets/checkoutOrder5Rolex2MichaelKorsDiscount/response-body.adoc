@@ -1,0 +1,4 @@
+[source,options="nowrap"]
+----
+{"price":600.0}
+----
