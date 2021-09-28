@@ -5,13 +5,16 @@ import com.bcgdv.challenge2.repositories.WatchRepository
 import com.ninjasquad.springmockk.MockkBean
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.http.MediaType
+import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 
 @WebMvcTest
+@AutoConfigureRestDocs(outputDir = "target/snippets")
 class WatchControllerTest(@Autowired val mockMvc: MockMvc) {
     @MockkBean
     private lateinit var watchRepository: WatchRepository
@@ -35,5 +38,6 @@ class WatchControllerTest(@Autowired val mockMvc: MockMvc) {
             .andExpect(jsonPath("\$.[1].name").value(michaelKors.name))
             .andExpect(jsonPath("\$.[2].name").value(swatch.name))
             .andExpect(jsonPath("\$.[3].name").value(casio.name))
+            .andDo(document("getWatches"))
     }
 }
