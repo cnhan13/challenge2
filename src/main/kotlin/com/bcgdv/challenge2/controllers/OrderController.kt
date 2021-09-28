@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class OrderController {
+public class OrderController {
+
+    private lateinit var watchRepo: WatchRepository
 
     @PostMapping("/checkout")
     fun checkout(@RequestBody orderItemIds: List<String>): Map<String, Double> {
-        val watchRepo = WatchRepository()
+        watchRepo = WatchRepository()
         val watches: List<Watch> = watchRepo.getWatches()
 
         val orderRepo = OrderRepository(watches)
@@ -22,11 +24,5 @@ class OrderController {
         return mapOf(
             "price" to orderRepo.getTotalPrice(order)
         )
-    }
-
-    @GetMapping("/")
-    fun index(): List<Watch> {
-        val watchRepo = WatchRepository()
-        return watchRepo.getWatches()
     }
 }
