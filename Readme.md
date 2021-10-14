@@ -15,7 +15,7 @@ mvnw test
 ./mvnw test
 ```
 
-2. View the API request & response sample of the tests [here](./index.html)
+2. View the API request & response sample of the tests [here](./index.html). (You may want to download & view the file in browser.)
 
 ## Source code structure
 ```console
